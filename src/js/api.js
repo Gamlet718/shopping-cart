@@ -1,5 +1,6 @@
 import { generateTemplate } from './generateTemplate.js'
 
+
 // Функция получения данных и отрисовки карточек на главной странице
 export async function getProducts() {
   try {
@@ -8,6 +9,12 @@ export async function getProducts() {
 
     // Формируем нужный html для карточек
     generateTemplate(data)
+    const addButtons = document.querySelectorAll('.btn-primary')
+    addButtons.forEach(button => {
+      button.addEventListener('click',() => {
+        console.log('кнопка нажата',button);
+      } );
+    });
   } catch (error) {
     console.error('Ошибка загрузки данных:', error)
   }
