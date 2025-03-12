@@ -7,7 +7,7 @@ export function generateTemplate(data) {
   if (data && Array.isArray(data)) {
     data.forEach((product) => {
       html += `
-          <div class="main-card">
+          <div class="main-card" data-id = "${product?.id}">
               <div class="card-image">
                 <img src="${product?.imgSrc}" alt="image">
 

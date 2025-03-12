@@ -130,3 +130,14 @@
   color: var(--text-color);
   max-width: 384px;
 }
+
+.message-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50; /* Зеленый цвет */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  z-index: 1000; /* Чтобы сообщение было поверх других элементов */
+}
